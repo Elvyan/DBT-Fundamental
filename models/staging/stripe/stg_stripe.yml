@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__payment.sql
+    description: Foreign Key related to stg_jaffle_shop__orders
+    columns:
+      - name: orderid
+        tests:
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
