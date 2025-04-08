@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_stripe__payment.sql
+  - name: stg_stripe__payment
     description: Foreign Key related to stg_jaffle_shop__orders
     columns:
       - name: orderid
