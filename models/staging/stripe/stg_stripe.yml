@@ -4,6 +4,12 @@ models:
   - name: stg_stripe__payments
     description: Foreign Key related to stg_jaffle_shop__orders
     columns:
+      - name: payment_id
+        description: Primary Key of payments
+        tests:
+          - unique
+          - not_null
+
       - name: order_id
         tests:
           - relationships:
